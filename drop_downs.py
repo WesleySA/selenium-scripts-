@@ -9,6 +9,11 @@ element = driver.find_element_by_id("continents")
 
 drb = Select(element)
 
+for o in drb.options:
+    print(o.text)
+
+    print(len(drb.options))
+
 drb.select_by_visible_text("South America")
 
 print("test passed")
